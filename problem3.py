@@ -1,32 +1,20 @@
 #! python3
 """
-Ask the user to enter positive integers.
-After each entry, add the number to a list
-If the entry is -1 then stop adding numbers to the list
-Sort the list and display the highest number added
-
-inputs:
-as many integers as needed
-
-outputs:
-Display the largest number:
-
-examples:
-Enter an integer:3
-Enter an integer:2
-Enter an integer:8
-Enter an integer:92
-Enter an integer:48
-Enter an integer:13
-Enter an integer:24
-Enter an integer:-1
-
-The largest number you entered is 92
+Create a function called factors()
+Input parameter is a positive integer
+Output is a sorted list containing all of the factors of that number.
+Note: A Factor is a positive integer that can be evenly divided
+into another number.
+Example: The factors of 10 are 1, 2, 5, 10
+(2 points)
 """
-numbers=[]
-while (-1 in numbers)==False:
-    inp=int(input("Enter an integer: "))
-    numbers.append(inp)
-if (-1 in numbers)==True:
-    numbers.sort()
-    print("The largest number you entered is "+str(numbers[-1]))
+import math
+def factors(x):
+    factorlist=[]
+    for i in range(1, x+1):
+        if x % i == 0:
+            factorlist.append(i)
+    factorlist.sort()
+    return factorlist
+y=factors(12)
+print(y)

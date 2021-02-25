@@ -1,20 +1,14 @@
-#! python3
+#!python3
 """
-Sort the given list by numerical value
-Find the smallest and the largest value and display them:
-
-inputs:
-none
-
-outputs:
-string containing the 2 numbers:
-
-example:
-The smallest number is 3 and the largest number is 9
+Create a function called perimeter()
+The input is a list.
+The return value is the sum of all the numbers in the list
+added together
+(2 points)
 """
+def perimeter(list):
+    return sum(list)
 
-myList = [ 3,6,5,4,6,7,8,6,5,9,4,5 ]
-myList.sort()
-x=myList[0]
-y=myList[-1]
-print("The smallest number is "+str(x)+" and the largest number is "+str(y))
+x=perimeter([5,2,6])
+print(x)
+y=perimeter([9,8,6,5.5])

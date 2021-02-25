@@ -1,31 +1,16 @@
 #!python3
 
-"""
-Create a LIST that contains the following strings, in order:
-Cat
-Fish
-Dog
-Bear
-Turtle
-
-Sort the list into alphabetical order and and then ask the user to enter a number corresponding
-to the index of an element.  Print the element associated with that index.
-
-inputs:
-integer number
-
-outputs:
-string animal
-
-example:
-Enter the index for an animal:2
-The animal at that index is Dog
-"""
+def sum(a,b):
+    #inputs
+    # a : float 
+    # b : float
+    # return value: returns the sum of the 2 numbers
+    return float(a) + float(b)
 
 
-
-animals = ['Cat', 'Fish', 'Dog', 'Bear', 'Turtle']
-animals.sort()
-print(animals)
-inp=int(input("Enter the index for an animal: "))
-print("The animal at that index is "+animals[inp])
+#this should return a value of 7
+x = sum(3,4)
+print(x)
+#this should return a value of 12.5
+y = sum(11,1.5)
+print(y)

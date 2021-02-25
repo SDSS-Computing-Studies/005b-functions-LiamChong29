@@ -1,36 +1,16 @@
-#! python3
-"""
-Print the list named "fruit".
-Ask the user to enter a word
-If the word is in the list, delete all occurrences of that word from the list
-If the word is not in the list, add the word to the list
-Print out the updated list
-
-inputs:
-string
-
-outputs:
-list
-
-examples:
-['apple', 'cherry', 'kiwi', 'apple', 'banana', 'strawberry', 'kiwi', 'blueberry', 'kiwi']
-Enter a word from the list:kiwi
-['apple', 'cherry', 'apple', 'banana', 'strawberry', 'blueberry']
-
-['apple', 'cherry', 'kiwi', 'apple', 'banana', 'strawberry', 'kiwi', 'blueberry', 'kiwi']
-Enter a word from the list:orange
-word not in list
-['apple', 'cherry', 'kiwi', 'apple', 'banana', 'strawberry', 'kiwi', 'blueberry', 'kiwi', 'orange']
+#!python3
 
 """
+Create a function called distance()
+Input is 2 tuples, that each contain an (x,y) coordinate.
+Return value is the distance between the (x,y) coordinates.
+Note that the coordinates should be signed (positive or negative) floats
+(2 points)
+"""
+import math
 
-fruit = ["apple","cherry","kiwi","apple","banana","strawberry","kiwi","blueberry","kiwi"]
-print(fruit)
-inp=input("Enter a fruit: ").strip()
-if inp in fruit:
-    fruit.remove(inp)
-    fruit.remove(inp)
-    print(fruit)
-else:
-    fruit.append(inp)
-    print(fruit)
+def distance(x,y):
+    return math.hypot(y[0]-x[0],y[1]-x[1])
+
+x=distance((2,4), (6,3))
+print(x)
